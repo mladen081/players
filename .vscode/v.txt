@@ -80,3 +80,8 @@ npx tailwindcss init  -p
 
 npm install --save-dev prettier-plugin-tailwindcss
 
+////////// 052 //////////
+
+"test:unit": "vitest --environment jsdom",
+
+npm run test:unit

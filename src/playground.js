@@ -7,17 +7,27 @@
 
 ////////// 046 JavaScript Objects, Properties, and Methods
 
-const developer = {
-  salary: 100000,
-  experience: 4.5,
-  techStack: ["Vue", "HTML", "CSS"],
-  lookingForWork: true,
-  doubleSalary() {
-    this.salary = this.salary * 2;
-    this.lookingForWork = false;
-  },
-};
+// const developer = {
+//   salary: 100000,
+//   experience: 4.5,
+//   techStack: ["Vue", "HTML", "CSS"],
+//   lookingForWork: true,
+//   doubleSalary() {
+//     this.salary = this.salary * 2;
+//     this.lookingForWork = false;
+//   },
+// };
 
-console.log(developer);
-developer.doubleSalary();
-console.log(developer);
+// console.log(developer);
+// developer.doubleSalary();
+// console.log(developer);
+
+////////// 054 Multiple Describe Blocks
+
+export const evenOrOdd = (number) => {
+  if (number % 2 === 0) {
+    return "Even";
+  } else {
+    return "Odd";
+  }
+};
