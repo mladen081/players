@@ -82,6 +82,43 @@ npm install --save-dev prettier-plugin-tailwindcss
 
 ////////// 052 //////////
 
-"test:unit": "vitest --environment jsdom",
+"test:unit": "vitest --environment jsdom --coverage",
 
 npm run test:unit
+
+////////// 058 //////////
+
+    ---- vite.config.js
+        test: {
+          globals: true,
+        },
+
+    npm install --save-dev eslint-plugin-vitest-globals
+
+    ---- .eslint.cjs
+        "plugin|:vitest-globals/recomended",
+
+        env: {
+          "vitest-globals/env": true,
+        },
+
+////////// 063 //////////
+
+npm install --save-dev @testing-library/vue @testing-library/jest-dom @testing-library/user-event
+
+    ---- @/tests/setup.js
+        import { cleanup } from "@testing-library/vue";
+        import matchers from "@testing-library/jest-dom/matchers";
+        import { expect, afterEach } from "vitest";
+
+        expect.extend(matchers);
+
+        afterEach(() => {
+          cleanup();
+        });
+    
+    ---- vite.config.js
+        test: {
+          globals: true,
+          setupFiles: ["./tests/setup.js"],
+        },

@@ -4,11 +4,9 @@
       <div
         class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8"
       >
-        <a class="flex h-full items-center text-xl" href="/">{{ company }}</a>
-        <h2 class="ml-8 flex h-full items-center">
-          Developed by {{ author.firstName }} {{ author.lastName }}
-          {{ author.yearOfBirth }}
-        </h2>
+        <a class="flex h-full items-center text-xl" :href="url">{{
+          company
+        }}</a>
       </div>
     </div>
   </header>
@@ -19,12 +17,8 @@ export default {
   name: "MainNav",
   data() {
     return {
-      company: "Bobo Careers",
-      author: {
-        firstName: "Uros",
-        lastName: "Perisic",
-        yearOfBirth: 1981,
-      },
+      company: "Man Utd",
+      url: "https://www.manutd.com/",
     };
   },
 };
