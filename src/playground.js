@@ -34,7 +34,7 @@
 
 // export const multiply = (num1, num2) => num1 * num2;
 
-//////////
+////////// test
 
 // playground.test.js
 
@@ -65,4 +65,20 @@
 //   });
 // });
 
-//////////
+////////// test
+
+////////// 075 The ES6 map Method on an Array
+
+// const numbers = [1, 2, 3, 4, 5];
+// const names = ["BOBBY", "SALLY", "DEBBIE"];
+
+// brand new array
+
+// const squares = numbers.map((number) => number * number);
+// console.log(squares);
+
+// console.log(
+//   names.map((name) => {
+//     return name.toLocaleLowerCase();
+//   })
+// );
