@@ -21,4 +21,16 @@ describe("MainNav", () => {
       "Players",
     ]);
   });
+
+  describe("when the user logs in", () => {
+    it("displays user profile picture", () => {
+      render(MainNav);
+
+      // screen.getAllByRole("img");
+      const profileImage = screen.queryByRole("img", {
+        name: /user profile image/i,
+      });
+      expect(profileImage).not.toBeInTheDocument();
+    });
+  });
 });
