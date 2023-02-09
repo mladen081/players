@@ -82,3 +82,16 @@
 //     return name.toLocaleLowerCase();
 //   })
 // );
+
+////////// 109 ES6 Review: Dynamic Object Keys
+
+// const favoriteFood = "sushi";
+
+// const favoriteFoodMeat = "pig";
+
+// const goodFoods = {
+//   [favoriteFood]: true,
+//   [favoriteFoodMeat]: false,
+// };
+
+// console.log(goodFoods);
