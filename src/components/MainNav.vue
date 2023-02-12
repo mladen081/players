@@ -1,5 +1,5 @@
 <template>
-  <header class="w-full text-sm">
+  <header :class="['w-full', 'text-sm', headerHeightClass]">
     <div class="fixed top-0 left-0 h-16 w-full bg-white">
       <div
         class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8"
@@ -25,7 +25,7 @@
           <action-button v-else text="Sign in" @click="loginUser" />
         </div>
       </div>
-      <the-subnav />
+      <the-subnav v-if="isLoggedIn" />
     </div>
   </header>
 </template>
@@ -46,9 +46,17 @@ export default {
     return {
       company: "Man Utd",
       url: "https://www.manutd.com/",
-      menuItems: ["Teams", "Life at Man Utd", "Players"],
+      menuItems: ["Teams", "Life at Man Utd", "Players", "Jobs"],
       isLoggedIn: false,
     };
+  },
+  computed: {
+    headerHeightClass() {
+      return {
+        "h-16": !this.isLoggedIn,
+        "h-32": this.isLoggedIn,
+      };
+    },
   },
   methods: {
     loginUser() {

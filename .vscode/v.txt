@@ -129,4 +129,18 @@ testing playground chrome extension
 
 https://www.pngitem.com/pimgs/m/487-4876417_link-head-png-toon-link-face-png-transparent.png
 
+////////// 119 //////////
+
 npm install --save @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/vue-fontawesome@latest-3
+
+import { createApp } from "vue";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
+import "@/index.css";
+import App from "@/App.vue";
+
+library.add(faSearch);
+
+createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app"); // builder patern
