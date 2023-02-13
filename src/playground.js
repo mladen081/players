@@ -95,3 +95,17 @@
 // };
 
 // console.log(goodFoods);
+
+////////// 135 The setTimeout and setInterval and clearInterval Functions
+
+// setTimeout(() => {
+//   console.log("I will print 2 seconds after the program starts!!! :)");
+// }, 2000);
+
+// const interval = setInterval(() => {
+//   console.log("I will print every 2 seconds :)");
+// }, 2000);
+
+// setTimeout(() => {
+//   clearInterval(interval);
+// }, 10000);
