@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import nextElementInList from "@/utils/nextElementInList";
+
 export default {
   name: "TheHeadline",
   data() {
@@ -21,10 +23,7 @@ export default {
   computed: {
     actionClasses() {
       return {
-        build: this.action === "Build",
-        create: this.action === "Create",
-        design: this.action === "Design",
-        code: this.action === "Code",
+        [this.action.toLocaleLowerCase()]: true,
       };
     },
   },
@@ -38,10 +37,7 @@ export default {
     changeTitle() {
       this.interval = setInterval(() => {
         const actions = ["Build", "Create", "Design", "Code"];
-        const currentActionIndex = actions.indexOf(this.action);
-        const nextActionIndex = (currentActionIndex + 1) % 4;
-        const nextAction = actions[nextActionIndex];
-        this.action = nextAction;
+        this.action = nextElementInList(actions, this.action);
       }, 3000);
     },
   },
