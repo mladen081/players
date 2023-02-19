@@ -109,3 +109,13 @@
 // setTimeout(() => {
 //   clearInterval(interval);
 // }, 10000);
+
+////////// 220 Install Axios NPM Package
+
+// const axios = require("axios");
+
+// url = "https://test-api-hz1d.onrender.com/books";
+
+// axios.get(url).then((response) => {
+//   console.log(response.data);
+// });

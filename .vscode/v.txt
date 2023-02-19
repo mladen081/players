@@ -148,3 +148,11 @@ createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app"); //
 ////////// 182 //////////
 
 npm install --save vue-router@4
+
+////////// 217 //////////
+
+npm install --save -dev json-server
+
+////////// 220 //////////
+
+npm install --save axios
