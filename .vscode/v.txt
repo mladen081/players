@@ -144,3 +144,7 @@ import App from "@/App.vue";
 library.add(faSearch);
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app"); // builder patern
+
+////////// 182 //////////
+
+npm install --save vue-router@4
