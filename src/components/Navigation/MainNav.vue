@@ -4,19 +4,24 @@
       <div
         class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8"
       >
-        <a class="flex h-full items-center text-xl" :href="url">{{
-          company
-        }}</a>
+        <router-link
+          class="flex h-full items-center text-xl"
+          :to="{ name: 'Home' }"
+          >Man Utd</router-link
+        >
+
         <nav class="ml-12 h-full">
           <ul class="flex h-full list-none">
             <li
               v-for="menuItem in menuItems"
-              :key="menuItem"
+              :key="menuItem.text"
               class="ml-9 h-full first:ml-0"
             >
-              <a href="" class="flex h-full items-center py-2.5">{{
-                menuItem
-              }}</a>
+              <router-link
+                :to="menuItem.url"
+                class="flex h-full items-center py-2.5"
+                >{{ menuItem.text }}</router-link
+              >
             </li>
           </ul>
         </nav>
@@ -44,9 +49,12 @@ export default {
   },
   data() {
     return {
-      company: "Man Utd",
-      url: "https://www.manutd.com/",
-      menuItems: ["Teams", "Life at Man Utd", "Players", "Jobs"],
+      menuItems: [
+        { text: "Teams", url: "/" },
+        { text: "Life at Man Utd", url: "/" },
+        { text: "Players", url: "/" },
+        { text: "Jobs", url: "/jobs/results" },
+      ],
       isLoggedIn: false,
     };
   },
