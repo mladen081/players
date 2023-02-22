@@ -116,6 +116,15 @@
 
 // url = "https://test-api-hz1d.onrender.com/books";
 
-// axios.get(url).then((response) => {
+// const fetchJobsV1 = () => {
+//   axios.get(url).then((response) => {
+//     console.log(response.data);
+//   });
+// };
+
+// const fetchJobsV2 = async () => {
+//   response = await axios.get(url);
 //   console.log(response.data);
-// });
+// };
+
+// fetchJobsV2();
