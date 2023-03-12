@@ -128,3 +128,13 @@
 // };
 
 // fetchJobsV2();
+
+////////// 235 The slice Method
+
+const a = ["Tuna", "Salmon", "Yellowtail", "Eel", "Shrimp", "Octopus", "Uni"];
+
+const b = a.slice(3);
+
+console.log("    Niz a: " + a + "\n");
+
+console.log("    Niz b: " + b);

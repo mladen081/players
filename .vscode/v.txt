@@ -156,3 +156,15 @@ npm install --save -dev json-server
 ////////// 220 //////////
 
 npm install --save axios
+
+////////// 252 //////////
+
+npm install --save pinia
+
+    ---- import { createPinia } from "pinia";
+    ---- const pinia = createPinia();
+    ---- .use(pinia)
+
+////////// 260 //////////
+
+npm install --save-dev @pinia/testing

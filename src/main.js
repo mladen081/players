@@ -1,15 +1,25 @@
 import { createApp } from "vue";
+import { createPinia } from "pinia";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faSearch, faCheese, faBone } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAngleDown,
+  faAngleUp,
+  faSearch,
+  faCheese,
+  faBone,
+} from "@fortawesome/free-solid-svg-icons";
 
 import "@/index.css";
 import router from "@/router";
 import App from "@/App.vue";
 
-library.add(faBone, faCheese, faSearch);
+library.add(faBone, faCheese, faSearch, faAngleDown, faAngleUp);
+
+const pinia = createPinia();
 
 createApp(App)
+  .use(pinia)
   .use(router)
   .component("font-awesome-icon", FontAwesomeIcon)
   .mount("#app");
