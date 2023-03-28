@@ -164,3 +164,46 @@
 // ];
 
 // console.log(jobs.filter((job) => job.organization === "Microsoft"));
+
+////////// 352 What about object Reactivity
+
+// const { ref, reactive, computed, toRef, toRefs } = require("vue");
+
+// const person = ref({
+//   name: "Boris",
+// });
+
+// console.log(person);
+// console.log(person.value);
+// console.log(person.value.name);
+
+// const title = computed(() => person.value.name + " the Great");
+// console.log(title.value);
+
+// person.value.name = "Peter";
+// console.log(title.value);
+
+// ----------
+
+// const person = reactive({
+//   firstName: "Mladen",
+//   lastName: "Jovic",
+// });
+
+// const { firstName, lastName } = person;
+// const firstName = toRef(person, "firstName");
+// const lastName = toRef(person, "lastName");
+
+// const { firstName, lastName } = toRefs(person);
+
+// const title = computed(() => `${firstName.value} ${lastName.value} the Great`);
+
+// const titleLength = computed(() => title.value.length);
+
+// console.log(title.value);
+
+// person.firstName = "Peter";
+// person.lastName = "Griffin";
+// console.log(title.value);
+
+// console.log(toRefs(person));
