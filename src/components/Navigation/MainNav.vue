@@ -36,7 +36,6 @@
 </template>
 
 <script>
-// import { mapStores } from "pinia";
 import { mapActions, mapState } from "pinia";
 import { useUserStore } from "@/stores/user.js";
 
@@ -76,7 +75,3 @@ export default {
   },
 };
 </script>
-
-<!-- :is-primary="true" -- type="primary" -->
-
-<!-- type="primary" -->

@@ -18,7 +18,28 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { computed, ref } from "vue";
+
+defineProps({
+  header: {
+    type: String,
+    required: true,
+  },
+});
+
+const isOpen = ref(false);
+
+const open = () => {
+  isOpen.value = !isOpen.value;
+};
+
+const caretIcon = computed(() =>
+  isOpen.value ? ["fas", "angle-up"] : ["fas", "angle-down"]
+);
+</script>
+
+<!-- <script>
 export default {
   name: "CollapsibleAccordion",
   props: {
@@ -43,4 +64,34 @@ export default {
     },
   },
 };
-</script>
+</script> -->
+
+<!--  -->
+
+<!-- <script>
+import { computed, ref } from "vue";
+
+export default {
+  name: "CollapsibleAccordion",
+  props: {
+    header: {
+      tyoe: String,
+      required: true,
+    },
+  },
+  setup() {
+    // run before creating component, but after Vue resolves props. this keyword is not available
+    const isOpen = ref(false);
+
+    const open = () => {
+      isOpen.value = !isOpen.value;
+    };
+
+    const caretIcon = computed(() =>
+      isOpen.value ? ["fas", "angle-up"] : ["fas", "angle-down"]
+    );
+
+    return { caretIcon, isOpen, open };
+  },
+};
+</script> -->
