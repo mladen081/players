@@ -168,3 +168,30 @@ npm install --save pinia
 ////////// 260 //////////
 
 npm install --save-dev @pinia/testing
+
+////////// 421 //////////
+
+npm install --save-dev typescript @vue/tsconfig @vue/eslint-config-typescript @types/jsdom @types/node
+
+    ---- tscongig.json
+    {
+      "extends": "@vue/tsconfig/tsconfig.web.json",
+      "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "tests/**/*"],
+      "exclude": [],
+      "compilerOptions": {
+        "composite": true,
+        "baseUrl": ".",
+        "paths": {
+          "@/*": ["./src/*"]
+        },
+        "types": ["vitest/globals", "@testing-library/jest-dom"]
+      }
+    }
+
+    ---- .esliny.cjs
+    "@vue/eslint-config-typescript",
+
+    ////////// 423 //////////
+
+    ---- env.t.ts
+    

@@ -183,7 +183,7 @@
 // person.value.name = "Peter";
 // console.log(title.value);
 
-// ----------
+// ---------- 352 Reactivity
 
 // const person = reactive({
 //   firstName: "Mladen",
@@ -207,3 +207,18 @@
 // console.log(title.value);
 
 // console.log(toRefs(person));
+
+// ---------- 429 TypeScript's Partial Type
+
+// import type { Job } from "@/api/types";
+
+// const state1: Partial<Job> = {};
+
+// const state2: Partial<Job> = {
+//   organization: "Microsoft",
+// };
+
+// const state3: Partial<Job> = {
+//   organization: "Microsoft",
+//   jobType: "Full-time",
+// };
