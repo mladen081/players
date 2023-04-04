@@ -26,7 +26,7 @@
   </form>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router"; // = $router inside templates (Composable)
 
@@ -45,21 +45,3 @@ const searchForJobs = () => {
   });
 };
 </script>
-
-<!-- <input
-  type="text"
-  :value="role"
-  placeholder="Software engineer"
-  class="w-full text-lg font-normal focus:outline-none"
-  @:input="updateRole"
-/> -->
-
-<!-- methods: {
-  updateRole(event) {
-    this.role = event.target.value;
-  },
-}, -->
-
-<!-- :value="location" -->
-
-<!-- @input="location = $event.target.value" -->

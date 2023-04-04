@@ -18,7 +18,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { computed, ref } from "vue";
 
 defineProps({
@@ -38,60 +38,3 @@ const caretIcon = computed(() =>
   isOpen.value ? ["fas", "angle-up"] : ["fas", "angle-down"]
 );
 </script>
-
-<!-- <script>
-export default {
-  name: "CollapsibleAccordion",
-  props: {
-    header: {
-      tyoe: String,
-      required: true,
-    },
-  },
-  data() {
-    return {
-      isOpen: false,
-    };
-  },
-  computed: {
-    caretIcon() {
-      return this.isOpen ? ["fas", "angle-up"] : ["fas", "angle-down"];
-    },
-  },
-  methods: {
-    open() {
-      this.isOpen = !this.isOpen;
-    },
-  },
-};
-</script> -->
-
-<!--  -->
-
-<!-- <script>
-import { computed, ref } from "vue";
-
-export default {
-  name: "CollapsibleAccordion",
-  props: {
-    header: {
-      tyoe: String,
-      required: true,
-    },
-  },
-  setup() {
-    // run before creating component, but after Vue resolves props. this keyword is not available
-    const isOpen = ref(false);
-
-    const open = () => {
-      isOpen.value = !isOpen.value;
-    };
-
-    const caretIcon = computed(() =>
-      isOpen.value ? ["fas", "angle-up"] : ["fas", "angle-down"]
-    );
-
-    return { caretIcon, isOpen, open };
-  },
-};
-</script> -->

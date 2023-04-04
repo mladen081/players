@@ -14,7 +14,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 
@@ -28,5 +28,3 @@ const jobsStore = useJobsStore();
 
 const FILTERED_JOBS = computed(() => jobsStore.FILTERED_JOBS);
 </script>
-
-<style></style>

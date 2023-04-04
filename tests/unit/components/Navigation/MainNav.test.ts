@@ -1,3 +1,4 @@
+import type { Mock } from "vitest";
 import { render, screen } from "@testing-library/vue";
 import userEvent from "@testing-library/user-event";
 import { RouterLinkStub } from "@vue/test-utils";
@@ -9,9 +10,11 @@ vi.mock("vue-router");
 import MainNav from "@/components/Navigation/MainNav.vue";
 import { useUserStore } from "@/stores/user";
 
+const useRouteMock = useRoute as Mock;
+
 describe("MainNav", () => {
   const renderMainNav = () => {
-    useRoute.mockReturnValue({ name: "Home" });
+    useRouteMock.mockReturnValue({ name: "Home" });
 
     const pinia = createTestingPinia();
 
@@ -54,7 +57,6 @@ describe("MainNav", () => {
 
       const userStore = useUserStore();
 
-      // screen.getAllByRole("img");
       let profileImage = screen.queryByRole("img", {
         name: /user profile image/i,
       });
