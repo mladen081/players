@@ -2,7 +2,7 @@
   <img
     class="h-8 w-8 rounded-3xl object-contain"
     :src="imageLink"
-    alt="User profile image"
+    alt="User profile photo"
   />
 </template>
 

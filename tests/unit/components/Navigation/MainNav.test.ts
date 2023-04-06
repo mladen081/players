@@ -72,7 +72,7 @@ describe("MainNav", () => {
       await userEvent.click(loginButton);
 
       profileImage = screen.getByRole("img", {
-        name: /user profile image/i,
+        name: /user profile photo/i,
       });
 
       expect(profileImage).toBeInTheDocument();
