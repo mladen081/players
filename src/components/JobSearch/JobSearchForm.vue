@@ -18,7 +18,11 @@
 
       <div class="relative flex h-full flex-1 items-center pl-3">
         <label for="location" class="absolute left-0 -top-10">Where?</label>
-        <text-input id="location" placeholder="LosAngeles" v-model="location" />
+        <text-input
+          id="location"
+          placeholder="Los Angeles"
+          v-model="location"
+        />
       </div>
     </div>
 
